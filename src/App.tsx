@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react'
-import { Product } from './types.d'
-import { Products } from './products'
 import './App.css'
+import Home from './components/Home'
+import Cart from './components/cart'
+import About from './components/about'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import ProductListing from './components/ProductListing'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 
 const App = () => {
-  const [products, setProducts] = useState<Product[]>([])
-
-  useEffect(() => {
-    setProducts(Products)
-  }, [])
-
   return (
-    <div className="App">
-      <h1>Product Listing</h1>
-      <div className="product-grid">
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.id} />
-            <p>{product.description}</p>
-            <p>${product.price}</p>
-          </div>
-        ))}
+    <Router>
+      <div className="app">
+        <Header />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/products" element={<ProductListing />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-    </div>
+    </Router>
   )
 }
 
