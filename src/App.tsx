@@ -1,7 +1,7 @@
 import './App.css'
 import Home from './components/Home'
 import Cart from './components/cart'
-import About from './components/about'
+import Login from './components/Login'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ProductListing from './components/ProductListing'
@@ -15,7 +15,7 @@ const App = () => {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/products" element={<ProductListing />} />
           </Routes>
