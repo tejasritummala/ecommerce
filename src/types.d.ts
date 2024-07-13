@@ -1,10 +1,11 @@
 export type Product = {
-  id: string
+  productId: string
   name: string
-  price: string
-  image: string
   description: string
-  type: string
+  price: string
+  category: string
+  stockQuantity: number
+  image: string[]
 }
 
 declare const require: {

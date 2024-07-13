@@ -11,25 +11,22 @@ const Login = () => {
     setValue(newValue)
   }
   return (
-    <>
-      <h1>Login Page</h1>
-      <Box sx={{ width: '100%', typography: 'body1' }}>
-        <TabContext value={value}>
-          <Box>
-            <TabList onChange={handleChange} aria-label="Login/Signup" centered>
-              <Tab label="Sign In" value="1" />
-              <Tab label="Create Account" value="2" />
-            </TabList>
-          </Box>
-          <TabPanel value="1">
-            <LoginForm />
-          </TabPanel>
-          <TabPanel value="2">
-            <SignupForm />
-          </TabPanel>
-        </TabContext>
-      </Box>
-    </>
+    <Box sx={{ width: '100%', typography: 'body1' }}>
+      <TabContext value={value}>
+        <Box>
+          <TabList onChange={handleChange} aria-label="Login/Signup" centered>
+            <Tab label="Sign In" value="1" />
+            <Tab label="Create Account" value="2" />
+          </TabList>
+        </Box>
+        <TabPanel value="1">
+          <LoginForm />
+        </TabPanel>
+        <TabPanel value="2">
+          <SignupForm />
+        </TabPanel>
+      </TabContext>
+    </Box>
   )
 }
 
