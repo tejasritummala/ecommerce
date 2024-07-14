@@ -15,7 +15,8 @@ body {
   padding-bottom: 100px;
 }
 
-.product-grid {
+/* Product Listing Page CSS Starts Here */
+.product-listing-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -31,12 +32,17 @@ body {
   text-align: left;
 }
 
+.product-card:hover {
+  cursor: pointer;
+}
+
 .product-card img {
   width: 100%;
   height: auto;
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
 }
+/* Product Listing Page CSS Ends Here */
 
 /* Header CSS starts here */
 .header {
