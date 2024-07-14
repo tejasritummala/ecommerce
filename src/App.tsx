@@ -5,6 +5,7 @@ import Login from './components/Login'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ProductListing from './components/ProductListing'
+import ProductDetail from './components/ProductDetail'
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/products" element={<ProductListing />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
           </Routes>
         </main>
         <Footer />

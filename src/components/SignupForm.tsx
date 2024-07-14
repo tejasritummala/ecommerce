@@ -42,7 +42,19 @@ const SignupForm = () => {
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
       />
-      <Button type="submit" fullWidth variant="contained" sx={{ mt: 2 }}>
+      <Button
+        type="submit"
+        fullWidth
+        variant="contained"
+        sx={{
+          mt: 2,
+          backgroundColor: 'black',
+          color: 'white',
+          '&:hover': {
+            backgroundColor: '#333',
+          },
+        }}
+      >
         Sign Up
       </Button>
     </Box>
